@@ -1,0 +1,96 @@
+@import 'root.css';
+
+main {
+    margin: 3em 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main section {
+    width: 80%;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main section article {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+main section img#profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+main section p {
+    width: 60%;
+    text-align: center;
+}
+
+main section a {
+    background-color: var(--secondary-color);
+    color: var(--primary-background-color);
+    padding: 1em;
+    margin: 1em;
+    text-decoration: none;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+}
+
+main section a:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+main section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main section ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+main i {
+    font-size: 2em;
+    margin-right: 0.5em;
+}
+
+main section.awards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.secondary, .secondary a  {
+    color: var(--secondary-color);
+}
+
+.finished {
+    color: var(--finished);
+}
+
+.in-progress {
+    color: var(--in-progress);
+}
+
+.private {
+    background-color: var(--private);
+}
+
+.private:hover {
+    background-color: var(--private-hover);
+}
