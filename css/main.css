@@ -46,6 +46,7 @@ main section a {
     border-radius: 1em;
     display: flex;
     align-items: center;
+    transition: 0.3s;
 }
 
 main section a:hover {
@@ -89,6 +90,7 @@ main section.awards {
 
 .private {
     background-color: var(--private);
+    transition: 0.3s;
 }
 
 .private:hover {

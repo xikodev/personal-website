@@ -1,6 +1,7 @@
 @import 'root.css';
 
 footer {
+    width: calc(100% - 6em);
     background-color: var(--secondary-background-color);
     padding: 2em 3em;
     display: flex;
