@@ -87,6 +87,12 @@ main hr {
     border-radius: 10%;
 }
 
+main section.education {
+    background-image: url("../images/unizg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .secondary, .secondary a  {
     color: var(--secondary-color);
 }
@@ -113,9 +119,18 @@ main hr {
         margin: 3em 3%;
     }
 
+    main h2 {
+        width: 80%;
+        text-align: center;
+    }
+
     main section {
-        width: 90%;
-        padding: 1em;
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    main hr {
+        width: 95%;
     }
 
     main section article {
@@ -125,5 +140,17 @@ main hr {
     main section p {
         width: 90%;
         text-align: start;
+    }
+
+    main section ul {
+        padding: 0;
+    }
+
+    main section ul li {
+        flex-wrap: wrap;
+    }
+
+    main section ul li h3 {
+        margin: 0 1em;
     }
 }
