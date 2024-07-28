@@ -62,7 +62,12 @@ main section ul {
 main section ul li {
     list-style: none;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+main section ul li p {
+    text-align: end;
 }
 
 main i {
@@ -74,6 +79,12 @@ main section.awards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+main hr {
+    width: 90%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10%;
 }
 
 .secondary, .secondary a  {
@@ -95,4 +106,24 @@ main section.awards {
 
 .private:hover {
     background-color: var(--private-hover);
+}
+
+@media (width <= 700px) {
+    main {
+        margin: 3em 3%;
+    }
+
+    main section {
+        width: 90%;
+        padding: 1em;
+    }
+
+    main section article {
+        margin: 0
+    }
+
+    main section p {
+        width: 90%;
+        text-align: start;
+    }
 }

@@ -5,12 +5,14 @@ header {
     background-color: var(--secondary-background-color);
     padding: 1em 3em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 header ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -27,4 +29,19 @@ header ul li a {
 
 header ul li a:hover {
     text-decoration: underline;
+}
+
+@media (width <= 700px) {
+    header h1 {
+        display: none;
+    }
+
+    header ul {
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    header ul li {
+        margin: 1em;
+    }
 }

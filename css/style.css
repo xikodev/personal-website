@@ -11,4 +11,5 @@ body {
     font-family: Verdana, sans-serif;
     font-size: 1em;
     height: 100%;
+    box-sizing: border-box;
 }
