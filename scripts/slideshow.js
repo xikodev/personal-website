@@ -5,6 +5,12 @@ let slideId = [];
 let i = 0;
 
 [].forEach.call(slideShows, () => {
+    for (let j = 0; j < slideShows[i].children.length - 2; j++) {
+        let dot = document.createElement('span');
+        dot.className = `dot${i+1}`;
+        dot.setAttribute('onclick',`currentSlide(${j+1}, ${i+1})`);
+        slideShows[i].parentElement.children[4].appendChild(dot);
+    }
     slideIndex.push(1);
     slideId.push(`mySlides${i+1}`);
     showSlides(1, i);
@@ -36,7 +42,12 @@ function showSlides(n, no) {
 
     for (i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
-        dots[i].style.backgroundColor = '#aaa';
+        try {
+            dots[i].style.backgroundColor = '#aaa';
+        }
+        catch (e) {
+            console.log(e);
+        }
     }
     x[slideIndex[no]-1].style.display = 'flex';
     dots[n-1].style.backgroundColor = 'var(--secondary-color)';
