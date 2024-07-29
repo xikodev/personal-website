@@ -137,8 +137,7 @@ main section.education {
 .slideshow-container {
     width: 70%;
     position: relative;
-    margin: auto;
-    max-height: 75vh;
+    max-height: 70%;
 }
 
 .slideshow-container div:not([class=text]) {
@@ -191,6 +190,10 @@ main section.education {
     position: absolute;
     bottom: 0;
     width: calc(100% - 20px);
+    text-align: center;
+}
+
+.dots {
     text-align: center;
 }
 
