@@ -181,16 +181,6 @@ main section.education {
     color: var(--primary-background-color);
 }
 
-.text {
-    color: #f2f2f2;
-    background-color: #0009;
-    padding: 8px 10px;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 20px);
-    text-align: center;
-}
-
 .dots {
     text-align: center;
 }
