@@ -12,7 +12,7 @@ let i = 0;
         slideShows[i].parentElement.children[4].appendChild(dot);
     }
     slideIndex.push(1);
-    slideId.push(`mySlides${i+1}`);
+    slideId.push(`slideshow${i+1}`);
     showSlides(1, i);
     i++;
 });
@@ -33,22 +33,24 @@ function showSlides(n, no) {
     let dots = document.getElementsByClassName(`dot${no+1}`);
 
     if (n > x.length) {
-        slideIndex[no] = 1
+        slideIndex[no] = 1;
+        n = 1;
     }
 
     if (n < 1) {
         slideIndex[no] = x.length;
+        n = x.length;
     }
 
     for (i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
         try {
             dots[i].style.backgroundColor = '#aaa';
-        }
-        catch (e) {
+        } catch (e) {
             console.log(e);
         }
     }
-    x[slideIndex[no]-1].style.display = 'flex';
+
     dots[n-1].style.backgroundColor = 'var(--secondary-color)';
+    x[slideIndex[no]-1].style.display = 'flex';
 }
