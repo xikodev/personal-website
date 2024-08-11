@@ -71,8 +71,17 @@ main section ul li p {
 }
 
 main i {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-right: 0.5em;
+}
+
+main span i, main span img {
+    margin: 0 0.25em;
+}
+
+main span img {
+    filter: invert();
+    height: 2.5em;
 }
 
 main section.awards {
@@ -142,17 +151,6 @@ p.private {
 
 .column img {
     border: 5px solid #0000;
-}
-
-.column img:active {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90vh;
-    width: auto;
-    box-shadow: 0 0 0 9999px #000b;
-    border: none;
 }
 
 .slideshow-container {
@@ -237,7 +235,7 @@ div.links {
 
 @media (width <= 700px) {
     main {
-        margin: 3em 3%;
+        margin: 2em 3%;
     }
 
     main h2 {
@@ -276,6 +274,26 @@ div.links {
     }
 
     .slideshow-container {
+        width: 100%;
+    }
+
+    div.links a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    div.links a i {
+        margin: 0 0 0.25em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
         width: 100%;
     }
 }

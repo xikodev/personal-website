@@ -9,7 +9,7 @@ let i = 0;
         let dot = document.createElement('span');
         dot.className = `dot${i+1}`;
         dot.setAttribute('onclick',`currentSlide(${j+1}, ${i+1})`);
-        slideShows[i].parentElement.children[4].appendChild(dot);
+        slideShows[i].parentElement.children[3].appendChild(dot);
     }
     slideIndex.push(1);
     slideId.push(`slideshow${i+1}`);
