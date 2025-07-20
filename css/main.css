@@ -8,40 +8,45 @@ main {
     align-items: center;
 }
 
-main section {
+section {
     width: 80%;
     padding: 3em 2em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-main section article {
+h1 {
+    font-size: 2em;
+    background: linear-gradient(135deg, var(--secondary-color) 0, var(--tertiary-color) 6em);
+    background-clip: text;
+    color: transparent;
+}
+
+section article {
     margin: 1em 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
 }
 
-main section img#profile-picture {
+section img#profile-picture {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    margin-right: 2em;
 }
 
-main section p {
+section p {
     width: 60%;
-    text-align: center;
 }
 
-main section a {
-    background-color: var(--secondary-color);
-    color: var(--primary-background-color);
-    padding: 1em;
-    margin: 1em;
+section a {
+    padding: 0.5em;
+    margin: 0.5em;
     text-decoration: none;
     border-radius: 1em;
     display: flex;
@@ -49,45 +54,49 @@ main section a {
     transition: 0.3s;
 }
 
-main section a:hover {
-    background-color: var(--secondary-color-hover);
-}
-
-main section ul {
+section ul {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
-main section ul li {
+section.about-me {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+section.about-me article {
+    flex-direction: row;
+}
+
+section.about-me article a {
+    margin: 0;
+}
+
+section ul li {
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main section ul li p {
+section.education ul, section.work-experience ul {
+    flex-direction: column;
+}
+
+section ul li p {
     text-align: end;
 }
 
 main i {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-right: 0.5em;
 }
 
-main span i, main span img {
+main span i {
     margin: 0 0.25em;
-}
-
-main span img {
-    filter: invert();
-    height: 2.5em;
-}
-
-main section.awards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 main hr {
@@ -96,46 +105,50 @@ main hr {
     border-radius: 10%;
 }
 
-main section.education {
+section.skills ul {
+    display: flex;
+    justify-content: center;
+}
+
+section.education {
     background-image: url("../images/unizg.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-main h3 {
+section.education article, section.work-experience article {
+    width: 100%;
 }
 
-.secondary, .secondary a  {
-    color: var(--secondary-color);
+section.education article ul, section.work-experience article ul {
+    width: 100%;
+    justify-content: space-between;
 }
 
-span.finished {
-    color: var(--finished);
+section.work-experience article ul li {
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2em;
 }
 
-a.finished {
-    background-color: var(--finished);
+.four-of-them {
+    background-image: url("../images/four-of-them.png");
 }
 
-a.finished:hover {
-    background-color: var(--finished-hover);
+section.work-experience article div a {
+    margin: 0;
+    padding-left: 0;
 }
 
-.in-progress {
-    color: var(--in-progress);
+section.work-experience article div p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
 }
 
-a.private {
-    background-color: var(--private);
-    transition: 0.3s;
-}
-
-a.private:hover {
-    background-color: var(--private-hover);
-}
-
-p.private {
-    color: var(--private);
+section.work-experience i {
+    margin: 0 0.25em;
 }
 
 .row {
@@ -153,84 +166,63 @@ p.private {
     border: 5px solid #0000;
 }
 
-.slideshow-container {
-    width: 70%;
-    position: relative;
-    max-height: 70%;
-}
-
-.slideshow-container div:not([class=text]) {
-    display: none;
-    aspect-ratio: 1/1;
-    background-color: #0005;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.slideshow-container div img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: calc(50% - 1.25em);
-    margin: 0;
-    padding: 1em;
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.25em;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: #0009;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
+.link-primary {
     background-color: var(--secondary-color);
     color: var(--primary-background-color);
+    transition: 0.3s;
 }
 
-.dots {
-    text-align: center;
+.link-primary:hover {
+    background-color: var(--secondary-color-hover);
 }
 
-.dots span {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #aaa;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.link-secondary {
+    color: var(--tertiary-color);
+    transition: 0.3s;
 }
 
-.dot:hover {
-    background-color: #fff !important;
+.link-secondary:hover {
+    color: var(--tertiary-color-hover);
 }
 
-div.links {
-    display: flex;
-    flex-direction: row;
+.secondary  {
+    color: var(--secondary-color);
 }
 
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
-    to {
-        opacity: 1;
-    }
+.tertiary  {
+    color: var(--tertiary-color);
+}
+
+span.finished {
+    color: var(--finished);
+}
+
+a.finished {
+    color: var(--primary-background-color);
+    background-color: var(--finished);
+    transition: 0.3s;
+}
+
+a.finished:hover {
+    background-color: var(--finished-hover);
+}
+
+.in-progress {
+    color: var(--in-progress);
+}
+
+a.private {
+    color: var(--primary-background-color);
+    background-color: var(--private);
+    transition: 0.3s;
+}
+
+a.private:hover {
+    background-color: var(--private-hover);
+}
+
+p.private {
+    color: var(--private);
 }
 
 @media (width <= 700px) {
@@ -238,43 +230,47 @@ div.links {
         margin: 2em 3%;
     }
 
-    main h2 {
-        width: 80%;
-        text-align: center;
+    header h2 {
+        display: none;
     }
 
-    main section {
+    section {
         width: 100%;
         padding: 1em 0;
     }
 
-    main hr {
+    section.education, section.work-experience ul li {
+        background-color: #0A0B1E70;
+        background-blend-mode: darken;
+    }
+
+    hr {
         width: 95%;
     }
 
-    main section article {
+    section article {
         margin: 0
     }
 
-    main section p {
+    section.about-me article {
+        flex-wrap: wrap;
+    }
+
+    section p {
         width: 90%;
         text-align: start;
     }
 
-    main section ul {
+    section ul {
         padding: 0;
     }
 
-    main section ul li {
+    section ul li {
         flex-wrap: wrap;
     }
 
-    main section ul li h3 {
+    section ul li h3 {
         margin: 0 1em;
-    }
-
-    .slideshow-container {
-        width: 100%;
     }
 
     div.links a {
