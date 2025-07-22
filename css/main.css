@@ -225,6 +225,11 @@ p.private {
     color: var(--private);
 }
 
+a.discord {
+    color: var(--primary-color);
+    background-color: var(--discord);
+}
+
 @media (width <= 700px) {
     main {
         margin: 2em 3%;

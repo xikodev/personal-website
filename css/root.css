@@ -2,16 +2,17 @@
     --primary-background-color: #0A0B1E;
     --secondary-background-color: #000000;
 
-    --primary-color: #fff;
+    --primary-color: #FFF;
     --secondary-color: #9333EA;
     --tertiary-color: #67E8F9;
 
     --secondary-color-hover: #7111D8;
     --tertiary-color-hover: #45C6D7;
 
-    --finished: #14ff6d;
-    --finished-hover: #00ff00;
-    --in-progress: #ffad00;
-    --private: #ff3f3f;
-    --private-hover: #ff1010;
+    --finished: #14FF6D;
+    --finished-hover: #00FF00;
+    --in-progress: #FFAD00;
+    --private: #FF3F3F;
+    --private-hover: #FF1010;
+    --discord: #5865F2;
 }
