@@ -164,6 +164,7 @@ section.work-experience i {
 
 .column img {
     border: 5px solid #0000;
+    width: 100%;
 }
 
 .link-primary {
@@ -288,13 +289,5 @@ a.discord {
 
     div.links a i {
         margin: 0 0 0.25em;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .column {
-        width: 100%;
     }
 }
